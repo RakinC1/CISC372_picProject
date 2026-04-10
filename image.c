@@ -78,7 +78,7 @@ void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     for (int i = 0; i < num_threads; i++){
         data[i].srcImage = srcImage;
         data[i].destImage = destImage;
-        data[i].algorithm = algorithm;
+        memcpy(data[i].algorithm, algorithm, sizeof(Matrix));
         data[i].start_row = i * rows_per_thread;
         data[i].end_row = (i == num_threads - 1) ? srcImage->height : (i+1)*rows_per_thread;
 
