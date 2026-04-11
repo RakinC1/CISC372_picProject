@@ -3,7 +3,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
-#include <pthread.h>
+#include <omp.h>
 #include "image.h"
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -20,30 +20,6 @@ Matrix algorithms[]={
     {{-2,-1,0},{-1,1,1},{0,1,2}},
     {{0,0,0},{0,1,0},{0,0,0}}
 };
-
-
-typedef struct {
-    Image* srcImage;
-    Image* destImage;
-    Matrix algorithm;
-    int start_row;
-    int end_row;
-} ThreadData;
-
-void* thread_func(void* arg){
-    ThreadData* data = (ThreadData*)arg;
-
-    for (int row = data->start_row; row < data->end_row; row++){
-        for (int pix = 0; pix < data->srcImage->width; pix++){
-            for (int bit = 0; bit < data->srcImage->bpp; bit++){
-                data->destImage->data[Index(pix,row,data->srcImage->width,bit,data->srcImage->bpp)] =
-                    getPixelValue(data->srcImage,pix,row,bit,data->algorithm);
-            }
-        }
-    }
-    return NULL;
-}
-
 
 uint8_t getPixelValue(Image* srcImage,int x,int y,int bit,Matrix algorithm){
     int px,mx,py,my;
@@ -67,26 +43,15 @@ uint8_t getPixelValue(Image* srcImage,int x,int y,int bit,Matrix algorithm){
     return result;
 }
 
-
 void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
-    int num_threads = 4;
-    pthread_t threads[num_threads];
-    ThreadData data[num_threads];
-
-    int rows_per_thread = srcImage->height / num_threads;
-
-    for (int i = 0; i < num_threads; i++){
-        data[i].srcImage = srcImage;
-        data[i].destImage = destImage;
-        memcpy(data[i].algorithm, algorithm, sizeof(Matrix));
-        data[i].start_row = i * rows_per_thread;
-        data[i].end_row = (i == num_threads - 1) ? srcImage->height : (i+1)*rows_per_thread;
-
-        pthread_create(&threads[i], NULL, thread_func, &data[i]);
-    }
-
-    for (int i = 0; i < num_threads; i++){
-        pthread_join(threads[i], NULL);
+    #pragma omp parallel for collapse(2)
+    for (int row=0; row<srcImage->height; row++){
+        for (int pix=0; pix<srcImage->width; pix++){
+            for (int bit=0; bit<srcImage->bpp; bit++){
+                destImage->data[Index(pix,row,srcImage->width,bit,srcImage->bpp)] =
+                    getPixelValue(srcImage,pix,row,bit,algorithm);
+            }
+        }
     }
 }
 
