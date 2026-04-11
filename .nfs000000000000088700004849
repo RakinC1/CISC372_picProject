@@ -1,0 +1,138 @@
+Script started on Fri 10 Apr 2026 09:07:48 PM EDT
+]0;rakinchy@login01.darwin:~/CISC372_picProject[?1034h[rakinchy@login01.darwin CISC372_picProject]$ vi id_rsa.publs[Kcd .sshls[Kworkgroup -g ea-cisc372-silbersalloc --ntasks=1 --cpus-per-task=4 --partition=standard[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[30Prun ./image pic1.jpg edgegcc -std=c99 image.c -o image -lpthread -lm[17Psrun ./image pic1.jpg edge
+srun: error: Please choose a workgroup before submitting a job
+srun: error: cli_filter plugin terminated with error
+]0;rakinchy@login01.darwin:~/CISC372_picProject[rakinchy@login01.darwin CISC372_picProject]$ srun ./image pic1.jpg edge[13Pvi id_rsa.pubsrun ./image pic1.jpg edge[C[C[1P[1@2
+srun: error: Please choose a workgroup before submitting a job
+srun: error: cli_filter plugin terminated with error
+]0;rakinchy@login01.darwin:~/CISC372_picProject[rakinchy@login01.darwin CISC372_picProject]$ cat srun ./image pic2.jpg edge1[C[C[C[C[C[C[C[C[C[13Pvi id_rsa.publs[Kcd .sshls[Kvi id_rsa.pubsrun ./image pic1.jpg edge2[C[C[C[C[C[C[C[C[Ccat [Koutput.yst[K[K[Ktxt
+]0;rakinchy@login01.darwin:~/CISC372_picProject[rakinchy@login01.darwin CISC372_picProject]$ cat output.txtsrun ./image pic2.jpg edge[12Pcat output.txt[Kls
+[0m[38;5;34mimage[0m    image.h   [38;5;13moutput.png[0m  [38;5;13mpic1.jpg[0m  [38;5;13mpic3.jpg[0m  README.md    stb_image_write.h
+image.c  makefile  output.txt  [38;5;13mpic2.jpg[0m  [38;5;13mpic4.jpg[0m  stb_image.h
+]0;rakinchy@login01.darwin:~/CISC372_picProject[rakinchy@login01.darwin CISC372_picProject]$ rm output.txt
+]0;rakinchy@login01.darwin:~/CISC372_picProject[rakinchy@login01.darwin CISC372_picProject]$ rm output.[K[K[K[K[K[K[K[K[K[Ksalloc --ntasks=1 --cpus-per-task=4 --partition=standard
+salloc: error: Please choose a workgroup before submitting a job
+salloc: error: cli_filter plugin terminated with error
+]0;rakinchy@login01.darwin:~/CISC372_picProject[rakinchy@login01.darwin CISC372_picProject]$ cd
+]0;rakinchy@login01.darwin:~[rakinchy@login01.darwin ~]$ workgroup -g ea-cisc372-silber
+]0;rakinchy@login01.darwin:~[?1034h[(ea-cisc372-silber:rakinchy)@login01.darwin ~]$ vpkg_require gcc
+Adding package `gcc/4.8.5` to your environment
+]0;rakinchy@login01.darwin:~[(ea-cisc372-silber:rakinchy)@login01.darwin ~]$ salloc --ntasks=1 --cpus-per-task=4 --partition=standard
+salloc: Granted job allocation 6183465
+salloc: Waiting for resource configuration
+salloc: Nodes r1n01 are ready for job
+]0;rakinchy@r1n01.darwin:~[?1034h[rakinchy@r1n01 ~]$ srun -p standard ./image pic1.jpg edge
+slurmstepd: error: execve(): /home/4408/./image: No such file or directory
+srun: error: r1n01: task 0: Exited with exit code 2
+]0;rakinchy@r1n01.darwin:~[rakinchy@r1n01 ~]$ srun -p standard ./image pic1.jpg edge[rakinchy@r1n01 ~]$ [25Pvi id_rsa.pubsrun -p standard ./image pic1.jpg edge[rakinchy@r1n01 ~]$ [Ksrun -p standard ./image pic1.jpg edge[rakinchy@r1n01 ~]$ [Kls
+[0m[38;5;27mCISC372_picProject[0m
+]0;rakinchy@r1n01.darwin:~[rakinchy@r1n01 ~]$ cd CISC372_picProject/
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ srun -p standard ./image pic1.jpg edge[1P[1@2
+Took 6 seconds
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ srun -p standard ./image pic2.jpg edge[16Pcd CISC372_picProject/srun -p standard ./image pic2.jpg edge[1P[1@1
+Took 7 seconds
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image.c  makefile    [0m[38;5;13mpic1.jpg[0m  [38;5;13mpic3.jpg[0m  stb_image.h
+[38;5;34mimage[0m      image.h  [38;5;13moutput.png[0m  [38;5;13mpic2.jpg[0m  [38;5;13mpic4.jpg[0m  stb_image_write.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ script output.txt
+Script started, file is output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[?1034h[rakinchy@r1n01 CISC372_picProject]$ cat output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image.c  makefile	output.txt  pic2.jpg  pic4.jpg	   stb_image_write.h
+image	   image.h  output.png	pic1.jpg    pic3.jpg  stb_image.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ vim     nano output.tst  xt
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                           File: output.txt                                                             [28;53H[ Read 0 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[29d[J[30;120H[30;1H[?1049l[?1l>]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ rm output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ rm output.png 
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ rm output.png [1Ptxt[2@nano output.txtls[Kcat output.txt[1Pvi id_rsa.publs[Kcd .sshls[Kworkgroup -g ea-cisc372-silbersalloc --ntasks=1 --cpus-per-task=4 --partition=standard[rakinchy@r1n01 CISC372_picProject]$ s[30Prun ./image pic1.jpg edgealloc --ntasks=1 --cpus-per-task=4 --partition=standard[rakinchy@r1n01 CISC372_picProject]$ [26Pworkgroup -g ea-cisc372-silbersalloc --ntasks=1 --cpus-per-task=4 --partition=standard[rakinchy@r1n01 CISC372_picProject]$ s[30Prun ./image pic1.jpg edgealloc --ntasks=1 --cpus-per-task=4 --partition=standard[rakinchy@r1n01 CISC372_picProject]$ [26Pworkgroup -g ea-cisc372-silberls[Kcd .sshls[Kvi id_rsa.pubcat output.txtls[Knano output.txtls[Kcat output.txt[1Pvi id_rsa.pubcat output.txtls[Knano output.txt[2Prm output.txtpng [Kscript output.txt
+Script started, file is output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[?1034h[rakinchy@r1n01 CISC372_picProject]$ srun -p standard ./image pic1.jpg edge
+Took 6 seconds
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image.c  makefile	output.txt  pic2.jpg  pic4.jpg	   stb_image_write.h
+image	   image.h  output.png	pic1.jpg    pic3.jpg  stb_image.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ cat output          cat output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ nan  o output.txt
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                           File: output.txt                                                             [28;53H[ Read 0 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[29d[J[30;120H[30;1H[?1049l[?1l>]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ nano output.txt[Krm output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ rm output.png 
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ script output.txt
+Script started, file is output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[?1034h[rakinchy@r1n01 CISC372_picProject]$ vi id_rsa.publs[Kcd .sshls[Kworkgroup -g ea-cisc372-silbersalloc --ntasks=1 --cpus-per-task=4 --partition=standard[rakinchy@r1n01 CISC372_picProject]$ [26Pworkgroup -g ea-cisc372-silberls[Kcd .sshls[Kvi id_rsa.pub[Ksrun -p standard ./image pic1.jpg edge
+Took 7 seconds
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ exit
+exit
+Script done, file is output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ nano stb_image         output.txt
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                           File: output.txt                                                             [3;1H(B[mScript started on Fri Apr 10 21:24:43 2026[4d^[]0;rakinchy@r1n01.darwin:~/CISC372_picProject^G^[[?1034h[rakinchy@r1n01 CISC372_picProject]$ vi id_rsa.pub^H^H^H^H^H^$[5;1HTook 7 seconds[6d^[]0;rakinchy@r1n01.darwin:~/CISC372_picProject^G[rakinchy@r1n01 CISC372_picProject]$ exit[7dexit[9dScript done on Fri Apr 10 21:25:14 2026[28;53H(B[0;7m[ Read 7 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[29d[J[30;120H[30;1H[?1049l[?1l>]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ nano output.txt
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                           File: output.txt                                                             [3;1H(B[mScript started on Fri Apr 10 21:24:43 2026[4d^[]0;rakinchy@r1n01.darwin:~/CISC372_picProject^G^[[?1034h[rakinchy@r1n01 CISC372_picProject]$ vi id_rsa.pub^H^H^H^H^H^$[5;1HTook 7 seconds[6d^[]0;rakinchy@r1n01.darwin:~/CISC372_picProject^G[rakinchy@r1n01 CISC372_picProject]$ exit[7dexit[9dScript done on Fri Apr 10 21:25:14 2026[28;53H(B[0;7m[ Read 7 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[29d[J[30;120H[30;1H[?1049l[?1l>]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ git pull
+remote: Enumerating objects: 3, done.[K
+remote: Counting objects:  33% (1/3)[Kremote: Counting objects:  66% (2/3)[Kremote: Counting objects: 100% (3/3)[Kremote: Counting objects: 100% (3/3), done.[K
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From github.com:RakinC1/CISC372_picProject
+   1300799..f83422a  main       -> origin/main
+Updating 1300799..f83422a
+Fast-forward
+ image.c    |  53 +++++++++--------------------------------------------
+ output.png | Bin 29227245 -> 0 bytes
+ 2 files changed, 9 insertions(+), 44 deletions(-)
+ delete mode 100644 output.png
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image.c  makefile	pic1.jpg  pic3.jpg  stb_image.h
+image	   image.h  output.txt	pic2.jpg  pic4.jpg  stb_image_write.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ rm output.txt 
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image  image.c  image.h  makefile  pic1.jpg	pic2.jpg  pic3.jpg  pic4.jpg  stb_image.h  stb_image_write.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ rm image
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image.c  image.h  makefile  pic1.jpg  pic2.jpg  pic3.jpg  pic4.jpg  stb_image.h  stb_image_write.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ scri    ls[Kls^C
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ^C
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ script output.txt
+Script started, file is output.txt
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[?1034h[rakinchy@r1n01 CISC372_picProject]$ gcc -std=c99 image.c -o image_openmp -fopenmp -lm
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ salloc --ntasks=1 --cpus-per-task=4 --partition=standard
+salloc: Granted job allocation 6183469
+salloc: Waiting for resource configuration
+salloc: Nodes r1n01 are ready for job
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[?1034h[rakinchy@r1n01 CISC372_picProject]$ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ srun ./image_openmp pic1.jpg edge
+Took 6 seconds
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ exit
+logout
+salloc: Relinquishing job allocation 6183469
+salloc: Job allocation 6183469 has been revoked.
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ ls
+README.md  image.h	 makefile    output.txt  pic2.jpg  pic4.jpg	stb_image_write.h
+image.c    image_openmp  output.png  pic1.jpg	 pic3.jpg  stb_image.h
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ git add .
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'image' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ git add .         git status
+# On branch main
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   .nfs000000000000088700004849
+#	new file:   .nfs0000000000000a81000683fd
+#	new file:   .nfs0000000000000a82000683fe
+#	new file:   image_openmp
+#	new file:   output.png
+#	new file:   output.txt
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    image
+#
+]0;rakinchy@r1n01.darwin:~/CISC372_picProject[rakinchy@r1n01 CISC372_picProject]$ git reseer
